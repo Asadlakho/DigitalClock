@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/b2b731f521.js" crossorigin="anonymous"></script>
-    <title>Digital clock! Asad ali Lakho</title>
+    <title>Digital Clock | Asad Ali Lakho</title>
     <style>
       body {
         margin: 0;
@@ -17,6 +17,8 @@
         font-family: "Poppins", sans-serif;
         color: #fff;
         overflow: hidden;
+        text-align: center;
+        padding: 20px;
       }
 
       h1 {
@@ -27,6 +29,7 @@
         color: #00eaff;
         text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff, 0 0 60px #00eaff;
         animation: glowTitle 3s ease-in-out infinite alternate;
+        word-wrap: break-word;
       }
 
       @keyframes glowTitle {
@@ -43,7 +46,8 @@
         background: rgba(0, 234, 255, 0.1);
         padding: 25px 60px;
         border-radius: 25px;
-        box-shadow: 0 0 40px rgba(0, 234, 255, 0.5), inset 0 0 20px rgba(0, 234, 255, 0.3);
+        box-shadow: 0 0 40px rgba(0, 234, 255, 0.5),
+          inset 0 0 20px rgba(0, 234, 255, 0.3);
         letter-spacing: 5px;
         color: #00f5ff;
         text-shadow: 0 0 25px #00eaff, 0 0 50px #00f5ff;
@@ -56,7 +60,8 @@
           box-shadow: 0 0 25px rgba(0, 234, 255, 0.5);
         }
         to {
-          box-shadow: 0 0 60px rgba(0, 234, 255), inset 0 0 30px rgba(0, 234, 255, 0.5);
+          box-shadow: 0 0 60px rgba(0, 234, 255),
+            inset 0 0 30px rgba(0, 234, 255, 0.5);
         }
       }
 
@@ -65,7 +70,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: repeating-radial-gradient(circle at center, rgba(0, 234, 255, 0.05) 0%, transparent 10%);
+        background: repeating-radial-gradient(
+          circle at center,
+          rgba(0, 234, 255, 0.05) 0%,
+          transparent 10%
+        );
         animation: fadeBg 10s infinite alternate;
         z-index: -1;
       }
@@ -78,15 +87,41 @@
           opacity: 0.6;
         }
       }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          font-size: 3rem;
+          padding: 15px 40px;
+          letter-spacing: 3px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          font-size: 2.2rem;
+          padding: 10px 25px;
+          border-radius: 15px;
+        }
+      }
     </style>
   </head>
+
   <body>
-    <h1 style="color: palegreen;">
-      Digital <span>Clock <i class="fa-solid fa-clock fa-lg" style="color: chocolate;"></i></span>
+    <h1 style="color: palegreen">
+      Digital <span>Clock <i class="fa-solid fa-clock fa-lg" style="color: chocolate"></i></span>
     </h1>
     <h2 id="time"></h2>
 
-
+    <script src="clock.js"></script>
   </body>
-   <script src="clock.js"></script>
 </html>
