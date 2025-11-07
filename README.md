@@ -13,7 +13,7 @@ Beautiful gradient background
 
 Fully responsive and lightweight
 
-💡 Technologies Used
+💡 Technologies Used :
 
 .HTML5
 
@@ -22,3 +22,6 @@ Fully responsive and lightweight
 .JavaScript (setInterval & Date API)
 
 .Font Awesome Icons
+
+🚀 Live Demo :
+🔗 https://asadlakho.github.io/DigitalClock/
