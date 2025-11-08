@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b2b731f521.js" crossorigin="anonymous"></script>
+    <title>Digital clock! Asad ali Lakho</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at center, #00111a 0%, #000814 100%);
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        overflow: hidden;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #00eaff;
+        text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff, 0 0 60px #00eaff;
+        animation: glowTitle 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes glowTitle {
+        from {
+          text-shadow: 0 0 15px #00eaff;
+        }
+        to {
+          text-shadow: 0 0 35px #00ffff, 0 0 55px #00eaff;
+        }
+      }
+
+      h2 {
+        font-size: 4.5rem;
+        background: rgba(0, 234, 255, 0.1);
+        padding: 25px 60px;
+        border-radius: 25px;
+        box-shadow: 0 0 40px rgba(0, 234, 255, 0.5), inset 0 0 20px rgba(0, 234, 255, 0.3);
+        letter-spacing: 5px;
+        color: #00f5ff;
+        text-shadow: 0 0 25px #00eaff, 0 0 50px #00f5ff;
+        animation: pulse 1.8s infinite alternate ease-in-out;
+        transition: all 0.3s ease;
+      }
+
+      @keyframes pulse {
+        from {
+          box-shadow: 0 0 25px rgba(0, 234, 255, 0.5);
+        }
+        to {
+          box-shadow: 0 0 60px rgba(0, 234, 255), inset 0 0 30px rgba(0, 234, 255, 0.5);
+        }
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: repeating-radial-gradient(circle at center, rgba(0, 234, 255, 0.05) 0%, transparent 10%);
+        animation: fadeBg 10s infinite alternate;
+        z-index: -1;
+      }
+
+      @keyframes fadeBg {
+        from {
+          opacity: 0.3;
+        }
+        to {
+          opacity: 0.6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: palegreen;">
+      Digital <span>Clock <i class="fa-solid fa-clock fa-lg" style="color: chocolate;"></i></span>
+    </h1>
+    <h2 id="time"></h2>
+
+
+  </body>
+   <script src="clock.js"></script>
+</html>
